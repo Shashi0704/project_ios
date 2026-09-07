@@ -7,46 +7,51 @@
 
 import SwiftUI
 
+//import SwiftUI
+
 struct ContentView: View {
+    
     @State private var isDarkMode = false
+    
     var body: some View {
         ZStack {
-            Color(.systemBackground)
+            
+            // Screen background
+            (isDarkMode
+             ? Color(red: 18/255, green: 18/255, blue: 18/255)   // Dark blacl
+             : Color(red: 1.0, green: 0.945, blue: 0.953))      // Light pink 
                 .ignoresSafeArea()
-            VStack(spacing:0){
+            
+            VStack(spacing: 0) {
                 
-                //  top section
-                HeaderView(isDarkMode : $isDarkMode)
+                // Top section
+                HeaderView(isDarkMode: $isDarkMode)
                 
-                 ScrollView {
-                    VStack(spacing:20){
+                ScrollView {
+                    VStack(spacing: 20) {
                         
-                        //profile
-                        
+                        // Profile
                         ProfileHeaderView()
                         
-                        
-//                        //membership card
+                        // Membership card
                         PawPointsCardView()
-//
-//                        // Quick actions
+                        
+                        // Quick actions
                         QuickActionsView()
-//
-//                        // best frnd
-//                        BestFriendView()
                         
-                        
+                        // Best friend
+                        BestFriendView()
                     }
-
-                    
-                    .padding(.horizontal,20)
-                   .padding(.top,15)
-//                    .padding(.bottom,20)
+                    .padding(.horizontal, 20)
+                    .padding(.top, 15)
                 }
+                
+                // Bottom bar
                 BottomTabBar()
             }
-            .preferredColorScheme(isDarkMode ? .dark : .light)
         }
+        // This controls Light/Dark system appearance
+        .preferredColorScheme(isDarkMode ? .dark : .light)
     }
 }
 

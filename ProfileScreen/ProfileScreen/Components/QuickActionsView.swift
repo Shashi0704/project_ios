@@ -34,8 +34,14 @@ struct QuickActionsView: View {
         HStack(spacing: 20) {
             ZStack{
                 RoundedRectangle(cornerRadius: 8)
-                    .fill(Color.white.opacity(0.25))
-                    .frame(width: 50, height: 50)
+                    .fill(Color(red: 1.0, green: 0.945, blue: 0.953))
+                        .frame(width: 50, height: 50)
+                        .shadow(
+                            color: .black.opacity(0.20),
+                            radius: 4,
+                            x: 2,
+                            y: 3
+                        )
                 QuickAction(
                     icon: "bag.fill",
                     title: "Orders",
@@ -47,8 +53,14 @@ struct QuickActionsView: View {
             }
             ZStack{
                 RoundedRectangle(cornerRadius: 8)
-                    .fill(Color.white.opacity(0.25))
-                    .frame(width: 50, height: 50)
+                    .fill(Color(red: 1.0, green: 0.945, blue: 0.953))
+                        .frame(width: 50, height: 50)
+                        .shadow(
+                            color: .black.opacity(0.20),
+                            radius: 4,
+                            x: 2,
+                            y: 3
+                        )
                 QuickAction(
                     icon: "heart.fill",
                     title: "Wishlist",
@@ -60,8 +72,14 @@ struct QuickActionsView: View {
             
             ZStack{
                 RoundedRectangle(cornerRadius: 8)
-                    .fill(Color.white.opacity(0.25))
-                    .frame(width: 50, height: 50)
+                    .fill(Color(red: 1.0, green: 0.945, blue: 0.953))
+                        .frame(width: 50, height: 50)
+                        .shadow(
+                            color: .black.opacity(0.20),
+                            radius: 4,
+                            x: 2,
+                            y: 3
+                        )
                 
                 QuickAction(
                     icon: "mappin.circle.fill",
@@ -74,9 +92,14 @@ struct QuickActionsView: View {
 
             ZStack{
                 RoundedRectangle(cornerRadius: 8)
-                    .fill(Color.white.opacity(0.25))
-                    .frame(width: 50, height: 50)
-            
+                    .fill(Color(red: 1.0, green: 0.945, blue: 0.953))
+                        .frame(width: 50, height: 50)
+                        .shadow(
+                            color: .black.opacity(0.20),
+                            radius: 4,
+                            x: 2,
+                            y: 3
+                        )
             QuickAction(
                 icon: "questionmark.circle.fill",
                 title: "Help",
@@ -86,6 +109,7 @@ struct QuickActionsView: View {
             }
             }
         }
+        .padding(.horizontal,18)
     }
 }
 #Preview {

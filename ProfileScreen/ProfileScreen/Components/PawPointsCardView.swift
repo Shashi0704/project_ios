@@ -48,6 +48,7 @@ var width:CGFloat
 
 
            }
+
        }
     
 }
@@ -80,7 +81,7 @@ ZStack{
                       
                    }
                }
-               .padding(.horizontal, 20)
+               .padding(.horizontal, 18)
                .frame(width: width, height: height, alignment: .top)
                .padding(.top, 50)
            }
@@ -149,9 +150,9 @@ ZStack{
 .padding(.top, 150)
 
                }
-               .padding(.horizontal, 20)
+               .padding(.horizontal, 18)
                .frame(width: width, height: height, alignment: .top)
-               .padding(.top, 20)
+               .padding(.top, 10)
            }
     
 }
